@@ -28,6 +28,10 @@ To complete this exercise you should understand
 - Loops or `forEach`
 - Comparison inside `if` statements
 
+## How to run the code?
+
+In Visual Studio you can press `F5`. Alternatively you can use the terminal and write `node script.js` when you're in the correct file.
+
 ## Advanced challenges
 
 1. Remove all of the punctuation (e.g. ".", ",", "!", "?") to tidy up the results
