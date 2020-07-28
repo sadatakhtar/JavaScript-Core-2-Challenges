@@ -10,7 +10,9 @@ More details for the implementation of this challenge can be found in `script.js
 
 ### Example Result
 
-An example of given an input what the expected output to be
+You can find an example working website here:
+
+https://waba-tron.github.io/Guess-The-Number-Game/Hi-lo.html
 
 ## Installation
 
