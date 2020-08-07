@@ -34,13 +34,12 @@ Students should understand
 - [ ] Add a character counter underneath the `textarea` which should update every time the content of `textarea` changes. A good way to do it is by setting a `input` event listener on the `textarea`. The `event` object passed to the event listener will have the `textarea` as the `event.target` property. We can then pull out the contents of the `textarea` by using the `event.target.value`.
 - [ ] When `textarea` content goes over 280 characters, display the counter in red. When the contents go back below 280 set it back to default colour. Prevent tweets from being posted when character limit is over 280 characters.
 - [ ] Add a delete icon to each tweet. On click, it should remove the corresponding tweet from the timeline.
-- [ ] A Twitter handle starts with an `@` symbol and can only contain alpha-numeric characters. When posting a new tweet to the timeline, turn handles into links. for example if a tweet contains @dmitrigrabov it should be turned into `<a href="/dmitrigrabov">@dmitrigrabov</a>`.
+- [ ] A Twitter handle starts with an `@` symbol and can only contain alpha-numeric characters. When posting a new tweet to the timeline, turn handles into links. for example if a tweet contains @dmitrigrabov it should be turned into `<a href="www.twitter.com/dmitrigrabov">@dmitrigrabov</a>`.
+- [ ] Use CSS to make your website look professional. Remember to follow [accessbiliity guidelines](https://developer.mozilla.org/en-US/docs/Web/Accessibility).
 
 ## Setup
 
 - Fork and clone this repo
-- Work in pairs and make sure you swap the keyboard every half an hour
 - Commit your code after each task is complete and push
-- Create a Pull Request after first push
 - If you are stuck for more than 20 mins ask for help
 - Don't worry too much about making it look pretty, focus on getting the core functionality to work. It is easier to apply to apply visual polish at the end than at the beginning while you are still moving things around.
