@@ -16,15 +16,20 @@ guessBtn.onclick=()=>{
   if(!numGuessed == "" && numGuessed >0 && numGuessed < 100){
     count++;
     tries--;
-    guessLeftParagraph.textContent = `You have ${tries} tries left!`;
-    document.getElementById("try").textContent="tries:"+count;
+    if(tries == 0){
+      guessLeftParagraph.textContent = `You lose, the number was ${randomNumber}!`;
+      setTimeout(newGame, 2000);
+      tries = 5;
+  
+    }else{
+      guessLeftParagraph.textContent = `You have ${tries} tries left!`;
+      document.getElementById("try").textContent="tries:"+count;
+    }
+   
   }else {
     document.getElementById("try").textContent="enter valid number!";
   }
-  if(tries == 0){
-    guessLeftParagraph.textContent = `You lose, the number was ${randomNumber}!`;
-
-  }
+  
 }
 
 function guessNumber() {
