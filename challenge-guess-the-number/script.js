@@ -26,8 +26,8 @@ guessBtn.onclick=()=>{
       document.getElementById("try").textContent="tries:"+count;
     }
    
-  }else {
-    document.getElementById("try").textContent="enter valid number!";
+    }else {
+      document.getElementById("try").textContent="enter valid number!";
   }
   
 }
