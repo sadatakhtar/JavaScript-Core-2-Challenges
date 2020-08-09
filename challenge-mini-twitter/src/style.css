@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main{
+    text-align: center;
+    background-color: darkcyan;
+    height: 100vh;
+    padding-top: 5vh;
+}
+
+#myForm{
+    
+    display: grid;
+    width: 30%;
+    margin: auto;
+    padding-top: 10vh; 
+    padding-bottom: 5vh;    
+}
+#myTextArea{
+    border-radius: 10px;
+    padding: 10px;
+
+}
+button {
+    width: 20%;
+    height: 40px;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 10px;
+    font-size: 16px;
+    background-color: darkorange;
+    color: white;
+    
+}
+button:hover{
+    color: black;
+}
+.tweetOutput{
+    border: 2px solid yellow;
+    width: 70%;
+    height: 20vh;
+    
+    margin: auto;
+}
+p{
+    text-align: left;
+    padding-left: 10px;
+}
