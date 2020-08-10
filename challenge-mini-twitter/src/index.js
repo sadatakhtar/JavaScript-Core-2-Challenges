@@ -1,4 +1,4 @@
-let charLimit = 280;
+let charLimit = 10;
 
 //SELECTORS
 let submitButton = document.getElementById('submitBtn');
@@ -15,36 +15,47 @@ submitButton.addEventListener('click', function(e){
         newParagraphTag.innerText = textArea.value;
         tweetOutput.appendChild(newParagraphTag);
     }else{
-        document.getElementById('characterCounter').style.color="red";
-        alert(`character limit of ${charLimit} exceeded!!!`);
+        document.getElementById('cc').style.color="red";
+       // alert(`character limit of ${charLimit} exceeded!!!`);
     }
     textArea.value = "";
-    setTimeout(resetCharCounter, 2000);
-
-   
-   
-  
+    setTimeout(resetCharCounter, 1000);
 });
 
-textArea.addEventListener('change', characterChecker);
+//textArea.addEventListener('change', characterChecker);
 
-function characterChecker(e){
-    let numOfChars = document.getElementById('myTextArea').value.length; //gets the number of charaters
-    //CHANGE COLOR OF TEXT IF EXCEED CHARACTER LIMIT
-    if(numOfChars > 280){
-        document.getElementById('characterCounter').innerHTML = `Character count: ${numOfChars}`;
-        document.getElementById('characterCounter').style.color="red";
-    }else{
-        document.getElementById('characterCounter').innerHTML = `Character count: ${numOfChars}`;
-        document.getElementById('characterCounter').style.color="green";
-    }
-};
+// function characterChecker(){
+//     let numOfChars = document.getElementById('myTextArea').value.length; //gets the number of charaters
+//     //CHANGE COLOR OF TEXT IF EXCEED CHARACTER LIMIT
+//     if(numOfChars > 280){
+//         document.getElementById('characterCounter').innerHTML = `Character count: ${numOfChars}`;
+//         document.getElementById('characterCounter').style.color="red";
+//     }else{
+//         document.getElementById('characterCounter').innerHTML = `Character count: ${numOfChars}`;
+//         document.getElementById('characterCounter').style.color="green";
+//     }
+// };
 
 function resetCharCounter(){
-    document.getElementById('characterCounter').innerHTML = `Character count: 0`;
-    document.getElementById('characterCounter').style.color="black";
+    document.getElementById('newCCParagraph').innerHTML = `0 characters`;
+    document.getElementById('newCCParagraph').style.color="black";
+
 };
 
+
+
+
+function cc(obj){
+    if(obj.value.length > 10){
+        
+        document.getElementById('newCCParagraph').innerHTML = obj.value.length+ ' characters';
+        document.getElementById('newCCParagraph').style.color = "red";
+    }else {
+        document.getElementById('newCCParagraph').innerHTML = obj.value.length+ ' characters';
+        document.getElementById('newCCParagraph').style.color = "green";
+    }
+    
+}
 
 
 

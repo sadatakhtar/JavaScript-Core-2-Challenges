@@ -12,9 +12,10 @@
         <h1>Mini - Twitter</h1>
         <div class="form">
             <form id="myForm" name="myform">
-                <textarea name="myform" id="myTextArea" cols="30" rows="10" placeholder="Tweet here..."></textarea>
+                <textarea name="myform" id="myTextArea" cols="30" rows="10" onkeyup="cc(this)" placeholder="Tweet here..."></textarea>
                 <div class="counter">
-                    <p id="characterCounter">Character count: 0</p>
+                    <!--<p id="characterCounter">Character count: 0</p>-->
+                    <p id="newCCParagraph">0 characters</p>
                 </div>
                 
                 <button type="submit" id="submitBtn">Submit</button>
