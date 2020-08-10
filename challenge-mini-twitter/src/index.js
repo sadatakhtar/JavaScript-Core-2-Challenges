@@ -1,3 +1,5 @@
+let charLimit = 280;
+
 //SELECTORS
 let submitButton = document.getElementById('submitBtn');
 let tweetOutput = document.querySelector('.tweetOutput');
@@ -9,38 +11,40 @@ let counterDiv = document.querySelector('.counter');
 submitButton.addEventListener('click', function(e){
     e.preventDefault();
     let newParagraphTag = document.createElement('p');
-    newParagraphTag.innerText = textArea.value;
-    tweetOutput.appendChild(newParagraphTag);
+    if(textArea.value.length <= charLimit){
+        newParagraphTag.innerText = textArea.value;
+        tweetOutput.appendChild(newParagraphTag);
+    }else{
+        document.getElementById('characterCounter').style.color="red";
+        alert(`character limit of ${charLimit} exceeded!!!`);
+    }
     textArea.value = "";
+    setTimeout(resetCharCounter, 2000);
 
-    
-    
+   
    
   
 });
-textArea.addEventListener('change', characterChecker)
 
-function characterChecker(){
-    let numOfChars = document.getElementById('myTextArea').value.length;
+textArea.addEventListener('change', characterChecker);
+
+function characterChecker(e){
+    let numOfChars = document.getElementById('myTextArea').value.length; //gets the number of charaters
     //CHANGE COLOR OF TEXT IF EXCEED CHARACTER LIMIT
-    if(numOfChars > 5){
+    if(numOfChars > 280){
         document.getElementById('characterCounter').innerHTML = `Character count: ${numOfChars}`;
         document.getElementById('characterCounter').style.color="red";
     }else{
         document.getElementById('characterCounter').innerHTML = `Character count: ${numOfChars}`;
+        document.getElementById('characterCounter').style.color="green";
     }
-   
-    console.log(numOfChars);
-}
+};
 
-// textArea.onclick = () => {
-//     //let counter = document.getElementById('characterCounter');
-//     let newP = document.createElement('p');
-//     newP.innerText = `Charachter count: ${textArea.value.length}`;
-//     counterDiv.appendChild(newP);
-//      //counter.innerText = textArea.value.length;
+function resetCharCounter(){
+    document.getElementById('characterCounter').innerHTML = `Character count: 0`;
+    document.getElementById('characterCounter').style.color="black";
+};
 
-// }
 
 
 
