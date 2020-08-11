@@ -1,4 +1,4 @@
-let charLimit = 10;
+let charLimit = 100;
 
 //SELECTORS
 let submitButton = document.getElementById('submitBtn');
@@ -7,47 +7,35 @@ let textArea = document.getElementById('myTextArea');
 let counterDiv = document.querySelector('.counter');
 
 
+
 //EVENT LISTENERS
 submitButton.addEventListener('click', function(e){
     e.preventDefault();
     let newParagraphTag = document.createElement('p');
+    let imgTag = document.createElement('img');
+    newParagraphTag.id="tweetP";
+    imgTag.id="icon";
+    imgTag.src = "./images/delete.svg";
+
     if(textArea.value.length <= charLimit){
         newParagraphTag.innerText = textArea.value;
         tweetOutput.appendChild(newParagraphTag);
+        newParagraphTag.appendChild(imgTag);
+       
     }else{
         document.getElementById('cc').style.color="red";
-       // alert(`character limit of ${charLimit} exceeded!!!`);
     }
     textArea.value = "";
     setTimeout(resetCharCounter, 1000);
 });
-
-//textArea.addEventListener('change', characterChecker);
-
-// function characterChecker(){
-//     let numOfChars = document.getElementById('myTextArea').value.length; //gets the number of charaters
-//     //CHANGE COLOR OF TEXT IF EXCEED CHARACTER LIMIT
-//     if(numOfChars > 280){
-//         document.getElementById('characterCounter').innerHTML = `Character count: ${numOfChars}`;
-//         document.getElementById('characterCounter').style.color="red";
-//     }else{
-//         document.getElementById('characterCounter').innerHTML = `Character count: ${numOfChars}`;
-//         document.getElementById('characterCounter').style.color="green";
-//     }
-// };
-
+//RESET COUNTER 
 function resetCharCounter(){
     document.getElementById('newCCParagraph').innerHTML = `0 characters`;
     document.getElementById('newCCParagraph').style.color="black";
-
 };
-
-
-
-
+//CHECK CHARACTER LIMIT AND HIGHLIGHT COLOR
 function cc(obj){
-    if(obj.value.length > 10){
-        
+    if(obj.value.length > 100){
         document.getElementById('newCCParagraph').innerHTML = obj.value.length+ ' characters';
         document.getElementById('newCCParagraph').style.color = "red";
     }else {

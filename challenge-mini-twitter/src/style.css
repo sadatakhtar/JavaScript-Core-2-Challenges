@@ -58,3 +58,16 @@ p{
     margin: auto;
     padding: 3px;
 }
+h3{
+    text-decoration: underline;
+    padding-bottom: 10px;
+}
+#icon{
+   width: 15px;
+   height: 15px;
+   margin-left: 5px;
+     
+}
+#tweetP{
+    font-family: 'Parisienne', cursive;
+}
