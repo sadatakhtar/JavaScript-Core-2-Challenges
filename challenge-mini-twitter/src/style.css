@@ -42,7 +42,8 @@ button:hover{
 .tweetOutput{
     border: 2px solid yellow;
     width: 70%;
-    height: 20vh;
+    min-height: 30vh;
+    height: fit-content;
     
     margin: auto;
 }
