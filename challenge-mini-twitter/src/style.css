@@ -63,7 +63,7 @@ h3{
     text-decoration: underline;
     padding-bottom: 10px;
 }
-#icon{
+#icon, #testImg{
    width: 15px;
    height: 15px;
    margin-left: 5px;

@@ -1,7 +1,7 @@
-let charLimit = 10;
-let user = "@John";
+let charLimit = 20;
+let user = "@User123";
 let imgTag;
-let aTag;
+
 
 //SELECTORS
 let submitButton = document.getElementById('submitBtn');
@@ -14,22 +14,18 @@ submitButton.addEventListener('click', function(e){
     e.preventDefault();
     let newParagraphTag = document.createElement('p');
     imgTag = document.createElement('img');
-    aTag = document.createElement('a');
-    aTag.id="myA";
-    aTag.href="#";
-    aTag.innerText = "@User";
     newParagraphTag.id="tweetP";
     imgTag.id="icon";
     imgTag.src = "./images/delete.svg";
-
+    
     if(textArea.value.length <= charLimit){
         newParagraphTag.innerText = `${user}- ${textArea.value}`;
         tweetOutput.appendChild(newParagraphTag);
         newParagraphTag.appendChild(imgTag);
-    
     }else{
         document.getElementById('cc').style.color="red";
     }
+    
     textArea.value = "";
     setTimeout(resetCharCounter, 1000);
 
