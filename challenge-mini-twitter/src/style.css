@@ -41,6 +41,7 @@ button:hover{
 }
 .tweetOutput{
     border: 2px solid yellow;
+    background-color: rgb(58, 53, 53);
     width: 70%;
     min-height: 30vh;
     height: fit-content;
@@ -61,14 +62,24 @@ p{
 }
 h3{
     text-decoration: underline;
+    font-size: 30px;
+    color: honeydew;
     padding-bottom: 10px;
 }
-#icon, #testImg{
+#icon{
    width: 15px;
    height: 15px;
    margin-left: 5px;
      
 }
-#tweetP{
-    font-family: 'Parisienne', cursive;
+#icon:hover{
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    background: rgb(105, 105, 9);
 }
+#tweetP{
+    
+    color: honeydew
+}
+

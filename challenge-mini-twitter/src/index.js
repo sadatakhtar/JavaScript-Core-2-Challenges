@@ -1,4 +1,4 @@
-let charLimit = 20;
+let charLimit = 280;
 let user = "@User123";
 let imgTag;
 
@@ -25,7 +25,7 @@ submitButton.addEventListener('click', function(e){
     }else{
         document.getElementById('cc').style.color="red";
     }
-    
+
     textArea.value = "";
     setTimeout(resetCharCounter, 1000);
 
